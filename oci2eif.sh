@@ -19,3 +19,5 @@ EIF_IMAGE=$2
 if [ -z ${OCI_IMAGE} ] || [ -z ${EIF_IMAGE} ]; then
 	print_usage
 fi
+
+./nitro-cli build-enclave --docker-uri $OCI_IMAGE --output-file file.eif
