@@ -15,3 +15,7 @@ fi
 
 OCI_IMAGE=$1
 EIF_IMAGE=$2
+
+if [ -z ${OCI_IMAGE} ] || [ -z ${EIF_IMAGE} ]; then
+	print_usage
+fi
