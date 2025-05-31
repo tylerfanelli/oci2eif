@@ -1,3 +1,3 @@
 cd example
 go build hello.go
-podman build -f Containerfile -t hello
+docker build -t hello .
