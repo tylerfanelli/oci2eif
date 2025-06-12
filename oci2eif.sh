@@ -21,10 +21,18 @@ fi
 
 ./nitro-cli build-enclave --docker-uri $OCI_IMAGE --output-file file.eif
 
+cat << EOF > .krun_vm.json
+{
+    "flavor":"aws-nitro",
+    "eif_file":"/krun-nitro-app.eif",
+}
+EOF
+
 cat << EOF > Dockerfile
 FROM scratch
 
 COPY file.eif /krun-nitro-app.eif
+COPY .krun_vm.json /.krun_vm.json
 EOF
 
 docker build -t ${OCI_IMAGE}-nitro .
