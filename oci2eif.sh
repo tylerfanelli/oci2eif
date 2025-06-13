@@ -25,6 +25,8 @@ cat << EOF > .krun_vm.json
 {
     "flavor":"aws-nitro",
     "eif_file":"/krun-nitro-app.eif",
+    "cpus":1,
+    "ram_mib":512,
 }
 EOF
 

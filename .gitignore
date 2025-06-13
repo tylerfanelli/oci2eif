@@ -1,3 +1,5 @@
 nitro-cli
 example/hello
 file.eif
+.krun_vm.json
+Dockerfile
