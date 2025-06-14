@@ -37,4 +37,4 @@ COPY file.eif /krun-nitro-app.eif
 COPY .krun_vm.json /.krun_vm.json
 EOF
 
-docker build -t ${OCI_IMAGE}-nitro .
+docker build -t ${OCI_IMAGE}_nitro .
