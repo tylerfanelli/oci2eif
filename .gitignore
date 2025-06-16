@@ -3,3 +3,4 @@ example/hello
 file.eif
 .krun_vm.json
 Dockerfile
+entrypoint/entrypoint

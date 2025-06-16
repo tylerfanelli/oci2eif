@@ -33,8 +33,11 @@ EOF
 cat << EOF > Dockerfile
 FROM scratch
 
+COPY entrypoint/entrypoint /entrypoint
 COPY file.eif /krun-nitro-app.eif
 COPY .krun_vm.json /.krun_vm.json
+
+ENTRYPOINT ["/entrypoint"]
 EOF
 
 docker build -t ${OCI_IMAGE}-nitro .
