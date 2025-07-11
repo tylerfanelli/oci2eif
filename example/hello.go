@@ -1,9 +1,15 @@
 package main
 
 import (
-        "log"
+		"fmt"
 )
 
 func main() {
-        log.Print("hello world")
+	var name string
+
+	fmt.Print("Enter name: ")
+
+	fmt.Scanln(&name)
+
+	fmt.Printf("Hello from a nitro enclave, %s!\n", name)
 }
